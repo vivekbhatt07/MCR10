@@ -1,5 +1,11 @@
-import React from "react";
-import { ContainedActionBtn, Filter, PageContainer } from "../../Components";
+import React, { useState } from "react";
+import {
+  ContainedActionBtn,
+  Filter,
+  ModalProvider,
+  PageContainer,
+  Form,
+} from "../../Components";
 import { useData } from "../../Context";
 
 import Table from "@mui/material/Table";
@@ -13,12 +19,26 @@ import { Link } from "react-router-dom";
 
 const Product = () => {
   const { state, filteredList } = useData();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <PageContainer>
       <div className="flex justify-between gap-3 w-full">
         <h1>Product</h1>
         <Filter />
-        <ContainedActionBtn>New</ContainedActionBtn>
+        <ModalProvider
+          modalTitle="ADD NEW PRODUCT"
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+          modalBtnVariant={
+            <ContainedActionBtn handleClick={openModal}>New</ContainedActionBtn>
+          }
+        >
+          <Form />
+        </ModalProvider>
       </div>
       <div>
         <TableContainer component={Paper}>

@@ -66,7 +66,10 @@ const Product = () => {
                     />
                   </TableCell>
                   <TableCell align="center">
-                    <Link to={`/products/${currentInventory.id}`}>
+                    <Link
+                      to={`/products/${currentInventory.id}`}
+                      className="underline text-stone-500 hover:text-[blue] transition-all"
+                    >
                       {currentInventory.name}
                     </Link>
                   </TableCell>

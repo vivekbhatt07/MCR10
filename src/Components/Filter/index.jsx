@@ -10,7 +10,7 @@ const Filter = () => {
       <select
         defaultValue=""
         value={state.category}
-        className="border px-2 py-1"
+        className="border px-2 py-1 rounded-md border-[#aaa]"
         onChange={(e) => {
           dispatch({ type: "FILTER_BY_CATEGORY", payload: e.target.value });
         }}
@@ -21,7 +21,7 @@ const Filter = () => {
         <option value="Kitchen">Kitchen</option>
       </select>
       <select
-        className="border px-2 py-1"
+        className="border px-2 py-1 rounded-md border-[#aaa]"
         onChange={(e) => {
           dispatch({ type: "FILTER_BY_SORT", payload: e.target.value });
         }}

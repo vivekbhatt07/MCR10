@@ -19,11 +19,25 @@ const Landing = () => {
     return currentInventory.stock <= 10;
   }).length;
 
+  const gridStyle = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    gap: "16px",
+  };
+
   return (
     <PageContainer>
-      <Card label="Total Stock">{totalStock}</Card>
-      <Card label="Total Delivered">{totalDelivered}</Card>
-      <Card label="Low Stock Items">{lowStockItems}</Card>
+      <ul style={gridStyle} className="w-full">
+        <Card label="Total Stock" color="green">
+          {totalStock}
+        </Card>
+        <Card label="Total Delivered" color="orange">
+          {totalDelivered}
+        </Card>
+        <Card label="Low Stock Items" color="red">
+          {lowStockItems}
+        </Card>
+      </ul>
     </PageContainer>
   );
 };

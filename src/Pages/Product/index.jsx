@@ -26,31 +26,33 @@ const Product = () => {
 
   return (
     <PageContainer>
-      <div className="flex justify-between gap-3 w-full">
-        <h1>Product</h1>
-        <Filter />
-        <ModalProvider
-          modalTitle="ADD NEW PRODUCT"
-          isOpen={isModalOpen}
-          closeModal={closeModal}
-          modalBtnVariant={
-            <ContainedActionBtn handleClick={openModal}>New</ContainedActionBtn>
-          }
-        >
-          <Form closeModal={closeModal} />
-        </ModalProvider>
-      </div>
-      <div>
+      <div className="flex flex-col gap-6">
+        <div className="flex justify-between gap-3 w-full">
+          <h1 className="text-3xl">Products</h1>
+          <Filter />
+          <ModalProvider
+            modalTitle="ADD NEW PRODUCT"
+            isOpen={isModalOpen}
+            closeModal={closeModal}
+            modalBtnVariant={
+              <ContainedActionBtn handleClick={openModal}>
+                New
+              </ContainedActionBtn>
+            }
+          >
+            <Form closeModal={closeModal} />
+          </ModalProvider>
+        </div>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell align="right">Image</TableCell>
-                <TableCell align="right">Name</TableCell>
-                <TableCell align="right">Description</TableCell>
-                <TableCell align="right">Price</TableCell>
-                <TableCell align="right">Stock</TableCell>
-                <TableCell align="right">Supplier</TableCell>
+                <TableCell align="center">Image</TableCell>
+                <TableCell align="center">Name</TableCell>
+                <TableCell align="center">Description</TableCell>
+                <TableCell align="center">Price</TableCell>
+                <TableCell align="center">Stock</TableCell>
+                <TableCell align="center">Supplier</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -63,17 +65,17 @@ const Product = () => {
                       className="w-[100px] h-[100px] object-cover"
                     />
                   </TableCell>
-                  <TableCell align="right">
+                  <TableCell align="center">
                     <Link to={`/products/${currentInventory.id}`}>
                       {currentInventory.name}
                     </Link>
                   </TableCell>
-                  <TableCell align="right">
+                  <TableCell align="center">
                     {currentInventory.description}
                   </TableCell>
-                  <TableCell align="right">{currentInventory.price}</TableCell>
-                  <TableCell align="right">{currentInventory.stock}</TableCell>
-                  <TableCell align="right">
+                  <TableCell align="center">{currentInventory.price}</TableCell>
+                  <TableCell align="center">{currentInventory.stock}</TableCell>
+                  <TableCell align="center">
                     {currentInventory.supplier}
                   </TableCell>
                 </TableRow>

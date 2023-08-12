@@ -26,7 +26,7 @@ const Product = () => {
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 h-[98vh]">
         <div className="flex justify-between gap-3 w-full">
           <h1 className="text-3xl">Products</h1>
           <Filter />
@@ -43,7 +43,7 @@ const Product = () => {
             <Form closeModal={closeModal} />
           </ModalProvider>
         </div>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} sx={{ height: "90vh" }}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>

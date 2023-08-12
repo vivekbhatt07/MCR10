@@ -20,8 +20,8 @@ const PageContainer = (props) => {
         <div className="basis-2/12 h-full">
           <Sidebar />
         </div>
-        <div className="pt-[2vh] flex flex-col gap-7 w-full px-4">
-          <div className="w-full">{children}</div>
+        <div className="flex flex-col gap-7 w-full px-4">
+          <div className="w-full h-[98vh] pt-[2vh]">{children}</div>
         </div>
       </div>
     </div>

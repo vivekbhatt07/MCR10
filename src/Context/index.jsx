@@ -23,6 +23,9 @@ const DataProvider = ({ children }) => {
       case "FILTER_BY_SORT": {
         return { ...state, sortBy: action.payload };
       }
+      case "RESET_FILTER": {
+        return { ...state, isLow: false, category: "", sortBy: "name" };
+      }
     }
   };
 

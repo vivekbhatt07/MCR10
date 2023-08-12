@@ -1,7 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { useData } from "../../../Context";
 
 const SidebarItem = (props) => {
   const { label, icon, reach } = props;
+  const { state, dispatch } = useData();
+
+  const location = useLocation();
+  // console.log(location.pathname);
   return (
     <div className="">
       <NavLink
@@ -12,6 +17,9 @@ const SidebarItem = (props) => {
             color: isActive ? "#fff" : "#000",
             backgroundColor: isActive ? "#292524" : "#d6d3d1",
           };
+        }}
+        onClick={(e) => {
+          dispatch({ type: "RESET_FILTER" });
         }}
       >
         <div>{icon}</div>

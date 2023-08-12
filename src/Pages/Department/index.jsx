@@ -1,12 +1,12 @@
 import React from "react";
-import { PageContainer, Card } from "../../Components";
+import { PageContainer, SecondCard } from "../../Components";
 
 const Department = () => {
   return (
-    <PageContainer>
-      <Card label="Kitchen"></Card>
-      <Card label="Clothing"></Card>
-      <Card label="Toys"></Card>
+    <PageContainer className="">
+      <SecondCard label="Kitchen">Kitchen</SecondCard>
+      <SecondCard label="Clothing">Clothing</SecondCard>
+      <SecondCard label="Toys">Toys</SecondCard>
     </PageContainer>
   );
 };

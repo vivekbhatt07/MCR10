@@ -9,6 +9,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const { state, filteredList } = useData();
@@ -42,7 +43,11 @@ const Product = () => {
                       className="w-[100px] h-[100px] object-cover"
                     />
                   </TableCell>
-                  <TableCell align="right">{currentInventory.name}</TableCell>
+                  <TableCell align="right">
+                    <Link to={`/products/${currentInventory.id}`}>
+                      {currentInventory.name}
+                    </Link>
+                  </TableCell>
                   <TableCell align="right">
                     {currentInventory.description}
                   </TableCell>

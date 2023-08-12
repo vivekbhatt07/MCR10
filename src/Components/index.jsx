@@ -1,6 +1,7 @@
 import ModalProvider from "./ModalProvider";
 import PageContainer from "./PageContainer";
 import ReviewCard from "./ReviewCard";
+import Filter from "./Filter";
 import {
   ContainedActionBtn,
   IconActionBtn,
@@ -27,4 +28,5 @@ export {
   Sidebar,
   MoreCard,
   Card,
+  Filter,
 };

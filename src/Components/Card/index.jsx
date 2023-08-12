@@ -1,8 +1,8 @@
-const Card = (props) => {
+const Card = ({ children, label }) => {
   return (
     <article className="flex flex-col items-center border-2 p-4 gap-3">
-      <span className="text-2xl">{props.children}</span>
-      <span>{props.label}</span>
+      {children && <span className="text-2xl">{children}</span>}
+      <span>{label}</span>
     </article>
   );
 };

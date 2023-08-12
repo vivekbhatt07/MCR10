@@ -12,20 +12,20 @@ const PageContainer = (props) => {
     gap: "16px",
   };
 
+  // style={gridStyle}
+
   return (
     <div className={classes}>
       <div className="flex min-h-screen gap-2">
         <div className="basis-2/12 h-full">
           <Sidebar />
         </div>
-        <div className="pt-[2vh] flex flex-col gap-7">
+        <div className="pt-[2vh] flex flex-col gap-7 w-full">
           <div className="">
             <h2 className="text-3xl capitalize">{label}</h2>
             {extra && extra}
           </div>
-          <div className="" style={gridStyle}>
-            {children}
-          </div>
+          <div className="w-full">{children}</div>
         </div>
       </div>
     </div>

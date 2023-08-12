@@ -1,24 +1,23 @@
-import { Home, Explore, PlaylistAdd, WatchLater } from "@mui/icons-material";
+import {
+  Dashboard,
+  AllInbox,
+  ProductionQuantityLimits,
+} from "@mui/icons-material";
 
 export const sidebarItemList = [
   {
-    label: "home",
-    icon: <Home />,
+    label: "Dashboard",
+    icon: <Dashboard />,
     reach: "/",
   },
   {
-    label: "explore",
-    icon: <Explore />,
-    reach: "/explore",
+    label: "Departments",
+    icon: <AllInbox />,
+    reach: "/departments",
   },
   {
-    label: "playlists",
-    icon: <PlaylistAdd />,
-    reach: "/playlists",
-  },
-  {
-    label: "watch later",
-    icon: <WatchLater />,
-    reach: "/watchLater",
+    label: "Products",
+    icon: <ProductionQuantityLimits />,
+    reach: "/products",
   },
 ];

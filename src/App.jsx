@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Landing, Detail } from "./Pages";
+import { Landing, Detail, Product, Department } from "./Pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -20,6 +20,8 @@ const App = () => {
       <div className="bg-stone-700">
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/departments" element={<Department />} />
+          <Route path="/products" element={<Product />} />
         </Routes>
       </div>
     </>

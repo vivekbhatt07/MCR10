@@ -12,6 +12,7 @@ import TextInput from "./TextInput";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import MoreCard from "./MoreCard";
+import Card from "./Card";
 export {
   ModalProvider,
   PageContainer,
@@ -25,4 +26,5 @@ export {
   Header,
   Sidebar,
   MoreCard,
+  Card,
 };

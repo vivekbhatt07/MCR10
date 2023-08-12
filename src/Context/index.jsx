@@ -26,6 +26,13 @@ const DataProvider = ({ children }) => {
       case "RESET_FILTER": {
         return { ...state, isLow: false, category: "", sortBy: "name" };
       }
+
+      case "ADD_PRODUCT": {
+        return {
+          ...state,
+          inventoryList: [...state.inventoryList, action.payload],
+        };
+      }
     }
   };
 

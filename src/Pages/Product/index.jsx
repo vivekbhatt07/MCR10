@@ -37,7 +37,7 @@ const Product = () => {
             <ContainedActionBtn handleClick={openModal}>New</ContainedActionBtn>
           }
         >
-          <Form />
+          <Form closeModal={closeModal} />
         </ModalProvider>
       </div>
       <div>
